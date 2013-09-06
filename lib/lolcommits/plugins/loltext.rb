@@ -48,7 +48,7 @@ module Lolcommits
         c.strokewidth '2'
         c.pointsize '32'
         c.font font_location
-        c.annotate '0', "test er text"
+        c.annotate '0', "test ergitwefadjs;lkfads;lfj text"
       end
 
       plugdebug "Writing changed file to #{self.runner.main_image}"
