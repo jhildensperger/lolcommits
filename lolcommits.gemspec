@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('methadone', '~> 1.2.4')
   s.add_runtime_dependency('open4', '~> 1.3.0')
   s.add_runtime_dependency('activesupport', '~> 3.2.12')
+  s.add_runtime_dependency('rb-appscript')
 
   # development dependencies
   s.add_development_dependency('rdoc')

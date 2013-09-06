@@ -28,7 +28,7 @@ module Lolcommits
         c.pointsize '48'
         c.interline_spacing '-9'
         c.font font_location
-        c.annotate '0', clean_msg(self.runner.now_playing)
+        c.annotate '0', clean_msg(self.runner.message)
       end
 
       image.combine_options do |c|
@@ -38,18 +38,18 @@ module Lolcommits
         c.strokewidth '2'
         c.pointsize '32'
         c.font font_location
-        c.annotate '0', self.runner.now_playing
+        c.annotate '0', 'self.runner.now_playing'
       end
 
-      image.combine_options do |c|
-        c.gravity 'NorthWest'
-        c.fill 'white'
-        c.stroke 'black'
-        c.strokewidth '2'
-        c.pointsize '32'
-        c.font font_location
-        c.annotate '0', "test ergitwefadjs;lkfads;lfj text"
-      end
+      # image.combine_options do |c|
+      #   c.gravity 'NorthWest'
+      #   c.fill 'white'
+      #   c.stroke 'black'
+      #   c.strokewidth '2'
+      #   c.pointsize '32'
+      #   c.font font_location
+      #   c.annotate '0', "self.runner.now_playing"
+      # end
 
       plugdebug "Writing changed file to #{self.runner.main_image}"
       image.write self.runner.main_image
