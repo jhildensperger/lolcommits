@@ -28,7 +28,7 @@ module Lolcommits
         c.pointsize '48'
         c.interline_spacing '-9'
         c.font font_location
-        c.annotate '0', clean_msg(self.runner.message)
+        c.annotate '0', clean_msg(self.runner.now_playing)
       end
 
       image.combine_options do |c|
