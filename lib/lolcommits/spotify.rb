@@ -2,7 +2,7 @@ require "appscript"
 include Appscript
 
 module Lolcommits
-  class GitInfo
+  class Spotify
   	attr_accessor :now_playing
 
     include Methadone::CLILogging
