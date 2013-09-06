@@ -1,14 +1,12 @@
 require 'appscript'
-include Appscript
 
 module Lolcommits
   class Spotify
   	attr_accessor :now_playing
+	include Appscript
 
-    include Methadone::CLILogging
  	def initialize
 		spotify = app("Spotify")
-
 		state = spotify.player_state.get
 		if state == :paused
 			self.now_playing = 'Spotify is paused'
