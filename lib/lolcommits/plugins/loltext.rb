@@ -48,7 +48,7 @@ module Lolcommits
         c.strokewidth '2'
         c.pointsize '32'
         c.font font_location
-        c.annotate '0', self.runner.now_playing
+        c.annotate '0', 'self.runner.now_playing'
       end
 
       plugdebug "Writing changed file to #{self.runner.main_image}"
