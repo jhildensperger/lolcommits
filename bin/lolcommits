@@ -141,6 +141,7 @@ def do_capture
         :capture_device => capture_device,
         :message        => Choice.choices[:msg],
         :sha            => Choice.choices[:sha],
+        :now_playing    => Choice.choices[:now_playing],
         :config         => configuration,
         :font           => capture_font
     )

@@ -2,7 +2,7 @@ module Lolcommits
   PLUGINS = Lolcommits::Plugin.subclasses
 
   class Runner
-    attr_accessor :capture_delay, :capture_device, :message, :sha,
+    attr_accessor :capture_delay, :capture_device, :message, :sha, :now_playing,
       :snapshot_loc, :main_image, :repo, :config, :repo_internal_path,
       :font
 
@@ -31,6 +31,11 @@ module Lolcommits
         self.message = git_info.message if self.message.nil?
         self.repo_internal_path = git_info.repo_internal_path
         self.repo = git_info.repo
+      end
+
+      if self.now_playing.nil?
+        spotify = Spotify.new
+        self.now_playing = spotify.now_playing
       end
     end
 
