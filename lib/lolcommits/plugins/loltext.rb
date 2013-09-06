@@ -42,7 +42,7 @@ module Lolcommits
       end
 
       image.combine_options do |c|
-        c.gravity 'NorthWesy'
+        c.gravity 'NorthWest'
         c.fill 'white'
         c.stroke 'black'
         c.strokewidth '2'
