@@ -5,9 +5,9 @@ require "lolcommits/version"
 Gem::Specification.new do |s|
   s.name        = "lolcommits"
   s.version     = Lolcommits::VERSION
-  s.authors     = ["Matthew Rothenberg"]
-  s.email       = ["mrothenberg@gmail.com"]
-  s.homepage    = "http://mroth.github.com/lolcommits/"
+  s.authors     = ["Jim Hildensperger"]
+  s.email       = ["jhildensperger@gmail.com"]
+  s.homepage    = "https://github.com/jhildensperger/lolcommits/tree/test"
   s.summary     = %q{Capture webcam image on git commit for lulz.}
   s.description = %q{Takes a snapshot with your webcam every time you git commit code, and archives a lolcat style image with it.}
   s.license     = "LGPL-3"
