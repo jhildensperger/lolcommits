@@ -28,47 +28,22 @@ module Lolcommits
         c.pointsize '48'
         c.interline_spacing '-9'
         c.font font_location
-        c.annotate '0', clean_msg(self.runner.message)
+        c.annotate '0', self.runner.sha + ' ' + clean_msg(self.runner.message)
       end
 
       image.combine_options do |c|
-        c.gravity 'NorthEast'
+        c.gravity 'NorthWest'
         c.fill 'white'
         c.stroke 'black'
         c.strokewidth '2'
         c.pointsize '32'
         c.font font_location
-        c.annotate '0', self.runner.sha
+        c.annotate '0', self.runner.now_playing
       end
 
       plugdebug "Writing changed file to #{self.runner.main_image}"
       image.write self.runner.main_image
     end
-
-    # use Rmagick wrapper (deprecated, no longer works in IM6.10+)
-    # def rm_run
-    #   canvas = ImageList.new(self.runner.main_image)
-    #   draw = Magick::Draw.new
-    #   draw.font = File.join(Configuration::LOLCOMMITS_ROOT, "vendor", "fonts", "Impact.ttf")
-
-    #   draw.fill   = 'white'
-    #   draw.stroke = 'black'
-
-    #   draw.annotate(canvas, 0, 0, 0, 0, self.runner.sha) do
-    #     self.gravity = NorthEastGravity
-    #     self.pointsize = 32
-    #     self.stroke_width = 2
-    #   end
-
-    #   draw.annotate(canvas, 0, 0, 0, 0, word_wrap(self.runner.message)) do
-    #     self.gravity = SouthWestGravity
-    #     self.pointsize = 48
-    #     self.interline_spacing = -(48 / 5) if self.respond_to?(:interline_spacing)
-    #     self.stroke_width = 2
-    #   end
-
-    #   canvas.write(runner.main_image)
-    # end
 
     private
 
